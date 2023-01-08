@@ -1,10 +1,13 @@
-pub mod day_1;
+mod day_1;
+mod day_2;
+mod utility;
 
 fn main() {
   println!("Welcome to Craig's Advent of Code 2022, Rust edition");
 
-  let mut tmp = day_1::parse_food_list("./src/day_1_input.txt".to_string());
-  let elves = &mut tmp;
-  day_1::elf_with_most_calories(elves);
-  day_1::top_three_elves(elves);
+  // Counting calories
+  day_1::day_1();
+
+  // Rock, paper, scissors
+  day_2::day_2();
 }
