@@ -1,5 +1,6 @@
 mod day_1;
 mod day_2;
+mod day_3;
 mod utility;
 
 fn main() {
@@ -10,4 +11,7 @@ fn main() {
 
   // Rock, paper, scissors
   day_2::day_2();
+
+  // Rucksack sorting
+  day_3::day_3();
 }
