@@ -9,11 +9,11 @@ pub fn day_3() {
   let rucksacks = rucksack_list.split_whitespace();
   let mut priority_sum = 0;
   let mut badge_sum = 0;
-  // let mut group_rucksacks = Vec::<&str>::with_capacity(3);
   let mut group_rucksacks: VecDeque<&str> = VecDeque::with_capacity(3);
 
   for (i, rucksack) in rucksacks.enumerate() {
     let (comp1, comp2) = rucksack.split_at(rucksack.len()/2);
+    // Search for common letter in both compartments of each rucksack
     for letter in comp1.chars() {
       if comp2.contains(letter) {
         priority_sum += priority(letter);
