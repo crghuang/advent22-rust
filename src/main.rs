@@ -1,6 +1,7 @@
 mod day_1;
 mod day_2;
 mod day_3;
+mod day_4;
 mod utility;
 
 fn main() {
@@ -14,4 +15,7 @@ fn main() {
 
   // Rucksack sorting
   day_3::day_3();
+
+  // Camp Cleanup
+  day_4::day_4();
 }

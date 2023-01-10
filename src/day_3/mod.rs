@@ -9,7 +9,7 @@ pub fn day_3() {
   let rucksacks = rucksack_list.split_whitespace();
   let mut priority_sum = 0;
   let mut badge_sum = 0;
-  let mut group_rucksacks: VecDeque<&str> = VecDeque::with_capacity(3);
+  let mut group_rucksacks: VecDeque<&str> = VecDeque::from(["","",""]);
 
   for (i, rucksack) in rucksacks.enumerate() {
     let (comp1, comp2) = rucksack.split_at(rucksack.len()/2);
@@ -21,14 +21,14 @@ pub fn day_3() {
       }
     }
 
+    // Maintain badge group of 3
     group_rucksacks.push_back(rucksack);
-    if i > 2 { // Maintain VecDeque size 3
-      group_rucksacks.pop_front();
-    }
+    group_rucksacks.pop_front();
+
     // Look for common letter across three rucksacks in each Badge group
     if (i+1) % 3 == 0 {
-      for letter in group_rucksacks.get(0).unwrap().chars() {
-        if group_rucksacks.get(1).unwrap().contains(letter) && group_rucksacks.get(2).unwrap().contains(letter) {
+      for letter in group_rucksacks[0].chars() {
+        if group_rucksacks[1].contains(letter) && group_rucksacks[2].contains(letter) {
           badge_sum += priority(letter);
           break;
         }
