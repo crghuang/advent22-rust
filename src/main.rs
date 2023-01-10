@@ -2,6 +2,7 @@ mod day_1;
 mod day_2;
 mod day_3;
 mod day_4;
+mod day_5;
 mod utility;
 
 fn main() {
@@ -18,4 +19,7 @@ fn main() {
 
   // Camp Cleanup
   day_4::day_4();
+
+  // Supply stacks
+  day_5::day_5();
 }
