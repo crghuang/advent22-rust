@@ -23,7 +23,7 @@ fn find_distinct_signal(signal: &String, length: usize) -> Option<usize> {
       }
     }
 
-    // No match found, reached start-of-packet
+    // No match found, found distinct signal
     return Some(n + length)
   }
   return None
