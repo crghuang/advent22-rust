@@ -9,7 +9,7 @@ pub fn day_6() {
   let first_som = find_distinct_signal(&signal, 14).unwrap();
 
   println!("\nPart 1: {first_sop} characters before first start-of-packet");
-  println!("\nPart 1: {first_som} characters before first start-of-message");
+  println!("\nPart 2: {first_som} characters before first start-of-message");
 }
 
 fn find_distinct_signal(signal: &String, length: usize) -> Option<usize> {
