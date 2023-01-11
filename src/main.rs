@@ -3,6 +3,7 @@ mod day_2;
 mod day_3;
 mod day_4;
 mod day_5;
+mod day_6;
 mod utility;
 
 fn main() {
@@ -22,4 +23,7 @@ fn main() {
 
   // Supply stacks
   day_5::day_5();
+  
+  // Tuning trouble
+  day_6::day_6();
 }
